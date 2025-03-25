@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="src/style/style.css">
+    <link rel="stylesheet" href="src/style/notes-form.css">
+    <link rel="stylesheet" href="src/style/notes-list.css">
+    <link rel="stylesheet" href="src/style/note-card.css">
+</head>
+<body>
+    <header>
+        <h1>Notes App</h1>
+    </header>
+    
+    <main>
+        <div class="container">
+            <!-- Formulir Tambah Catatan -->
+            <section class="notes-input">
+                <h2>Tambah Catatan Baru</h2>
+                <form id="noteForm">
+                    <div class="form-group">
+                        <label for="noteTitle">Judul Catatan</label>
+                        <input type="text" id="noteTitle" name="noteTitle" required maxlength="50" placeholder="Masukkan judul catatan">
+                    </div>
+                    <div class="form-group">
+                        <label for="noteBody">Isi Catatan</label>
+                        <textarea id="noteBody" name="noteBody" required maxlength="500" rows="4" placeholder="Tulis catatan Anda di sini"></textarea>
+                    </div>
+                    <button type="submit">Simpan Catatan</button>
+                </form>
+            </section>
+
+            <!-- Daftar Catatan -->
+            <section class="note-list">
+                <h2>Daftar Catatan</h2>
+                <div id="notesContainer" class="notes-grid">
+                    <!-- Catatan akan dimuat di sini -->
+                </div>
+            </section>
+            
+            <footer>
+                <p>&copy; 2025 Notes App - Arsyandi. Hak Cipta Dilindungi.</p>
+            </footer>
+        </div>
+    </main>
+
+    <!-- Modul JavaScript -->
+    <script type="module" src="src/scripts/data.js"></script>
+    <script type="module" src="src/components/note-form.js"></script>
+    <script type="module" src="src/components/note-list.js"></script>
+    <script type="module" src="src/components/note-card.js"></script>
+    <script type="module" src="src/scripts/app.js"></script>
+</body>
+</html>
