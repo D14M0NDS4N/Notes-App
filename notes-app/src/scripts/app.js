@@ -1,7 +1,8 @@
 import { generateUniqueId, validateNoteInput } from './utils.js';
+import { notesData } from './data.js';
 
 // Data notes (bisa diganti dengan penyimpanan yang lebih permanen)
-let notes = JSON.parse(localStorage.getItem('notes')) || [];
+let notes = notesData;
 
 // Fungsi render notes
 function renderNotes() {
