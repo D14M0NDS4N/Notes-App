@@ -16,7 +16,6 @@ class NotesForm extends HTMLElement {
         <style>
             label {
                 display: block;
-                margin-bottom: 5px;
                 font-weight: bold;
             }
 
@@ -32,6 +31,7 @@ class NotesForm extends HTMLElement {
                 display: block;
                 width: 100%;
                 padding: 10px;
+                margin-bottom: 15px;
                 background-color: #28a745;
                 color: white;
                 border: none;
@@ -43,15 +43,27 @@ class NotesForm extends HTMLElement {
             button:hover {
                 background-color: #218838;
             }
+
+            h2 {
+                margin-top: 2px;
+                font-size: 1.5rem;
+            }
             
             .form-group {
                 margin-bottom: 15px;
-                padding-right: 15px
+            }
+
+            .notes-input {
+                background-color: white;
+                padding: 20px;
+                padding-right: 30px;
+                border-radius: 8px;
+                box-shadow: 0 2px 5px rgba(0,0,0,0.1);
             }
 
             notes-form form {
                 background-color: white;
-                padding: 20px;
+                padding: 10px;
                 margin-bottom: 5px;
                 border-radius: 8px;
                 box-shadow: 0 2px 5px rgba(0,0,0,0.1);
@@ -75,16 +87,17 @@ class NotesForm extends HTMLElement {
                 cursor: pointer;
             }
         </style>
-
+        
             <form id="noteForm">
                 <div class="form-group">
+                    <h2>Tambah Catatan Baru<h2>
+                    <section class="notes-input">
                         <label for="noteTitle">Judul Catatan</label>
                         <input type="text" id="noteTitle" name="noteTitle" required maxlength="50" placeholder="Masukkan judul catatan">
-                    </div>
-                    <div class="form-group">
                         <label for="noteBody">Isi Catatan</label>
                         <textarea id="noteBody" name="noteBody" required maxlength="500" rows="4" placeholder="Tulis catatan Anda di sini"></textarea>
-                    </div>
+                    </section>
+                </div>
                     <button type="submit">Simpan Catatan</button>
             </form>
         `;

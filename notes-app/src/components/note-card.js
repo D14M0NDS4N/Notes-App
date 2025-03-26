@@ -52,6 +52,7 @@ class NoteCard extends HTMLElement {
                     padding: 5px;
                 }
             </style>
+            
             <div class="note-title">${title}</div>
             <div class="note-body">${body}</div>
             <div class="note-date">${formatDate(createdAt)}</div>

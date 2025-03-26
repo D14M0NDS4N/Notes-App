@@ -1,12 +1,12 @@
 import { generateUniqueId, validateNoteInput } from './utils.js';
-import { notesData } from './data.js';
+import notesData from './data.js';
 
 // Data notes (bisa diganti dengan penyimpanan yang lebih permanen)
 let notes = notesData;
 
 // Fungsi render notes
 function renderNotes() {
-    const container = document.getElementById('notesContainer');
+    const container = document.querySelector('note-list')
     
     // Hapus catatan yang ada
     container.innerHTML = '';
